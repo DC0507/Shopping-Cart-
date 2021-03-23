@@ -14,14 +14,4 @@ Card.propTypes = {
 	content: PropTypes.element
 };
 
-const CardDeck = () => {
-	return (
-		<div className="card-deck" style={{ fontSize: "64pt" }}>
-			<Card content="a" />
-			<Card content="b" />
-			<Card content="c" />
-		</div>
-	);
-};
-
-export default CardDeck;
+export default Card;

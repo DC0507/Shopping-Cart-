@@ -8,8 +8,8 @@ import NavBar from "./component/navbar";
 const App = () => {
 	return (
 		<Router>
-			<div>
-				<NavBar />
+			<NavBar />
+			<div className="container">
 				<Switch>
 					<Route exact path="/" component={(Home, Card)} />
 					<Route exact path="/product/:id" component={Product} />

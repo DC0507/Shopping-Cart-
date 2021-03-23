@@ -4,61 +4,69 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
 	return (
-		<nav className="navbar navbar-dark bg-dark">
-			<a className="navbar-brand" href="#">
-				Navbar
-			</a>
+		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+			<Link className="navbar-brand" href="#">
+				My Shopping Place
+			</Link>
 			<button
 				className="navbar-toggler"
 				type="button"
 				data-toggle="collapse"
-				data-target="#navbarNavDropdown"
-				aria-controls="navbarNavDropdown"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent"
 				aria-expanded="false"
 				aria-label="Toggle navigation">
 				<span className="navbar-toggler-icon"></span>
 			</button>
-			<div className="collapse navbar-collapse" id="navbarNavDropdown">
-				<ul className="navbar-nav">
+
+			<div
+				className="collapse navbar-collapse"
+				id="navbarSupportedContent">
+				<ul className="navbar-nav mr-auto">
 					<li className="nav-item active">
-						<Link className="nav-link" to="/">
+						<Link className="nav-link" href="#">
 							Home <span className="sr-only">(current)</span>
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link className="nav-link" to="/products">
-							Products
-						</Link>
-					</li>
-					<li className="nav-item">
 						<Link className="nav-link" href="#">
-							Pricing
+							Link
 						</Link>
 					</li>
 					<li className="nav-item dropdown">
 						<Link
 							className="nav-link dropdown-toggle"
 							href="#"
-							id="navbarDropdownMenuLink"
+							id="navbarDropdown"
 							role="button"
 							data-toggle="dropdown"
 							aria-haspopup="true"
 							aria-expanded="false">
-							Dropdown link
+							Products
 						</Link>
 						<div
 							className="dropdown-menu"
-							aria-labelledby="navbarDropdownMenuLink">
+							aria-labelledby="navbarDropdown">
 							<Link className="dropdown-item" href="#">
-								Action
+								Categories
 							</Link>
 							<Link className="dropdown-item" href="#">
 								Another action
 							</Link>
+							<div className="dropdown-divider"></div>
 							<Link className="dropdown-item" href="#">
 								Something else here
 							</Link>
 						</div>
+					</li>
+					<li className="nav-item">
+						<Link
+							className="nav-link disabled"
+							href="#"
+							tabindex="-1"
+							aria-disabled="true">
+							Disabled
+						</Link>
 					</li>
 				</ul>
 			</div>

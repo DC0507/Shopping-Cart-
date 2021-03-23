@@ -20,10 +20,10 @@ const Product = () => {
 				console.error(`Error: ${err}`);
 			});
 	}, []);
-
+	//
+	console.log(product);
 	return (
 		<>
-			<h1>PRODUCTO: {JSON.stringify(product)} </h1>
 			<img src={product.image} />
 		</>
 	);
